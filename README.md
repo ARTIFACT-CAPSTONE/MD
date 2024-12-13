@@ -47,3 +47,5 @@ Manage your account or learn more about the developers.
 
 - Logout:
 Safely exit the app when done.
+
+[Downloadable APK] (https://drive.google.com/file/d/1R7it4JvGe_9S8cyCNJ9x17oNUmfSR-g9/view?usp=sharing)
