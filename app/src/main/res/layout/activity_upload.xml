@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background_base"
+    tools:context=".ml.upload.UploadActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_upload"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+    <ImageView
+        android:id="@+id/iv_upload_header"
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+        android:src="@drawable/upload_activity"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_base"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/white_full"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/upload_back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/back_blue"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/back_base"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_base" />
+
+    <TextView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:layout_marginStart="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/gradient_first"
+        app:layout_constraintBottom_toBottomOf="@+id/back_base"
+        app:layout_constraintEnd_toEndOf="@+id/back_base"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_base" />
+
+    <ImageView
+        android:id="@+id/iv_result_image"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_upload_header"
+        app:srcCompat="@drawable/baseline_image_24"
+        tools:ignore="MissingConstraints" />
+
+    <com.example.artifact.ml.upload.CameraButton
+        android:id="@+id/btn_upload_camera"
+        android:layout_width="144dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/base"
+        android:text="@string/camera"
+        android:textColor="@color/purple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_upload_inputname"
+        app:strokeColor="@color/purple"
+        app:strokeWidth="1.5dp" />
+
+    <com.example.artifact.ml.upload.GalleryButton
+        android:id="@+id/btn_upload_gallery"
+        android:layout_width="144dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="48dp"
+        android:backgroundTint="@color/base"
+        android:text="@string/gallery"
+        android:textColor="@color/purple"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_upload_inputname"
+        app:strokeColor="@color/purple"
+        app:strokeWidth="1.5dp" />
+
+    <com.example.artifact.ml.upload.UploadButton
+        android:id="@+id/btn_upload_upload"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="@string/upload"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_upload_gallery" />
+
+    <EditText
+        android:id="@+id/ed_upload_inputname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="48dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/input_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ed_upload_title"
+        app:layout_constraintTop_toBottomOf="@+id/iv_result_image" />
+
+    <TextView
+        android:id="@+id/ed_upload_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ed_upload_inputname"
+        app:layout_constraintStart_toStartOf="@+id/btn_upload_camera" />
+
+    <ProgressBar
+        android:id="@+id/progressBarUpload"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:context=".ml.result.ResultActivity">
+
+        <ImageView
+            android:id="@+id/iv_result_header"
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:src="@drawable/header_result"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/back_base_result"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="-20dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/white_full"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/result_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/back_blue"
+            android:layout_marginStart="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/back_base_result"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/back_base_result" />
+
+        <TextView
+            android:id="@+id/back_button_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:layout_marginStart="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/gradient_first"
+            app:layout_constraintBottom_toBottomOf="@+id/back_base_result"
+            app:layout_constraintEnd_toEndOf="@+id/back_base_result"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/back_base_result" />
+
+        <TextView
+            android:id="@+id/tv_result_detection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detection"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_result_header" />
+
+        <ImageView
+            android:id="@+id/iv_result_image_result"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_marginBottom="256dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_result_detection"
+            app:srcCompat="@drawable/baseline_image_24" />
+
+        <TextView
+            android:id="@+id/tv_result_filename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/file_name"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_result_image_result" />
+
+        <TextView
+            android:id="@+id/tv_result_similarity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/similarity"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_result_filename" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

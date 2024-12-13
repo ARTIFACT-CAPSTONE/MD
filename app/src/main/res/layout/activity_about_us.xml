@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".view.AboutUsActivity">
+
+    <TextView
+        android:id="@+id/tv_about_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/about_us"
+        android:textStyle="bold"
+        android:fontFamily="@font/averia_libre"
+        android:textSize="32sp"
+        android:textColor="@color/gradient_first"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_about_cohort"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_about_title"
+        app:srcCompat="@drawable/white_box" />
+
+    <TextView
+        android:id="@+id/tv_about_cohort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cohort"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/gradient_middle"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_about_cohort"
+        app:layout_constraintStart_toStartOf="@+id/iv_about_cohort"
+        app:layout_constraintTop_toTopOf="@+id/iv_about_cohort" />
+
+    <ImageView
+        android:id="@+id/iv_about_group"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_about_cohort"
+        app:srcCompat="@drawable/white_box" />
+
+    <TextView
+        android:id="@+id/tv_about_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/group"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/gradient_middle"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_about_group"
+        app:layout_constraintStart_toStartOf="@+id/iv_about_group"
+        app:layout_constraintTop_toTopOf="@+id/iv_about_group" />
+
+    <TextView
+        android:id="@+id/tv_about_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/advisor"
+        android:fontFamily="@font/averia_libre"
+        android:textSize="26sp"
+        android:textColor="@color/gradient_first"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_about_group" />
+
+    <TextView
+        android:id="@+id/tv_about_advisor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="20dp"
+        android:lineSpacingMultiplier="1.3"
+        android:text="@string/advisor_list"
+        android:textColor="@color/purple"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_about_team" />
+
+    <TextView
+        android:id="@+id/tv_about_member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/averia_libre"
+        android:text="@string/member"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/gradient_first"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_about_advisor" />
+
+    <TextView
+        android:id="@+id/tv_about_teammember"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:lineSpacingMultiplier="1.3"
+        android:text="@string/member_list"
+        android:textColor="@color/purple"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_about_member" />
+
+    <ImageView
+        android:id="@+id/back_base"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/gradient_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/about_back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/back_white"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/back_base"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_base" />
+
+    <TextView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:layout_marginStart="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/back_base"
+        app:layout_constraintEnd_toEndOf="@+id/back_base"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_base" />
+
+    <ImageView
+        android:id="@+id/iv_about_header"
+        android:layout_width="240dp"
+        android:layout_height="120dp"
+        android:src="@drawable/header_about_us"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
